@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<fx:root type="StackPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="602.0" fitWidth="614.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/splendor.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="kader" arcHeight="5.0" arcWidth="5.0" blendMode="OVERLAY" fill="#1f93ff00" height="504.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="5.0" width="488.0" />
+      <VBox alignment="CENTER" maxWidth="400.0" spacing="50.0">
+         <children>
+            <GridPane hgap="8.0" vgap="8.0">
+               <columnConstraints>
+                  <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" />
+                  <ColumnConstraints hgrow="ALWAYS" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints vgrow="SOMETIMES" />
+                  <RowConstraints vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label fx:id="lblGebruikersnaam" textFill="WHITE">
+                     <font>
+                        <Font name="RomanC" size="19.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txfGebruikersnaam" prefHeight="26.0" prefWidth="166.0" GridPane.columnIndex="1" />
+                  <TextField fx:id="txfGeboortjaar" prefHeight="26.0" prefWidth="166.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label fx:id="lblGeboortejaar" prefHeight="26.0" prefWidth="165.0" textFill="WHITE" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="RomanC" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <VBox alignment="CENTER" spacing="20.0">
+               <children>
+                  <HBox alignment="CENTER" spacing="20.0">
+                     <children>
+                        <Button fx:id="btnTerug" minWidth="100.0" mnemonicParsing="false" onAction="#btnTerugClicked" />
+                        <Button fx:id="btnLogIn" disable="false" minWidth="100.0" mnemonicParsing="false" onAction="#btnLogInClicked" />
+                     </children>
+                  </HBox>
+                  <Button fx:id="btnStartSpel" disable="true" minWidth="220.0" mnemonicParsing="false" onAction="#btnStartSpelClicked" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</fx:root>

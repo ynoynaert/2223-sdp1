@@ -1,1 +1,1 @@
-# 2223-sd1
+# Splendor - Software Development Project I (2022-2023)
